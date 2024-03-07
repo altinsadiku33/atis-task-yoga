@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Task</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div style="padding: 20px">
+      <header>
+        <div class="header_div">
+          <p>Yoga with Dr.Danielle - Live class in session</p>
+        </div>
+      </header>
+      <nav>
+        <div class="navbar_container navbar_items">
+          <a href="/index.html">
+            <div class="logo">Logo</div>
+          </a>
+          <div class="nav_items">
+            <a href="/shop.html">Shop</a>
+            <div class="submenu">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 3rem;
+                "
+              >
+                <div
+                  style="display: flex; flex-direction: column; max-width: 30%"
+                >
+                  <div style="display: flex; align-items: center; gap: 0.5rem">
+                    <h4>Our Story</h4>
+                    <img
+                      src="images/right-arrow.png"
+                      alt="arrow"
+                      width="16px"
+                      height="16px"
+                    />
+                  </div>
+                  <p class="hover_menu_text">
+                    Learn about Dr. Danielle and her vision for Fierce Clarity.
+                    Read our origin story.
+                  </p>
+                </div>
+                <div
+                  style="display: flex; flex-direction: column; max-width: 30%"
+                >
+                  <div style="display: flex; align-items: center; gap: 0.5rem">
+                    <h4>Our Story</h4>
+                    <img
+                      src="images/right-arrow.png"
+                      alt="arrow"
+                      width="16px"
+                      height="16px"
+                    />
+                  </div>
+                  <p class="hover_menu_text">
+                    We approach health holistically, mind + body + spirit. Learn
+                    how we tackle all three.
+                  </p>
+                </div>
+                <div
+                  style="display: flex; flex-direction: column; max-width: 30%"
+                >
+                  <div style="display: flex; align-items: center; gap: 0.5rem">
+                    <h4>Our Story</h4>
+                    <img
+                      src="images/right-arrow.png"
+                      alt="arrow"
+                      width="16px"
+                      height="16px"
+                    />
+                  </div>
+                  <p class="hover_menu_text">
+                    The FC Gang is here to support and to be supported. Dive
+                    into our community.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="#">About</a>
+            <a href="#">Community</a>
+            <a href="#">Experiences</a>
+          </div>
+          <div class="user_section">
+            <a href="#">Sign In</a>
+            <a href="#">Search</a>
+            <div class="avatar">
+              <p>O</p>
+            </div>
+          </div>
+        </div>
+        <div class="navbar_mobile">
+          <div class="user_section">
+            <div class="avatar">
+              <p>O</p>
+            </div>
+            <img
+              src="images/menu.png"
+              alt="menu"
+              onclick="toggleMobileMenu()"
+            />
+          </div>
+        </div>
+        <div class="mobile_menu" id="mobileMenu">
+          <div>
+            <div style="display: flex; align-items: center">
+              <a href="/shop.html">Shop</a>
+              <img
+                src="images/right-arrow.png"
+                alt="arrow"
+                width="30px"
+                height="30px"
+              />
+            </div>
+            <div style="display: flex; align-items: center">
+              <a href="#">About</a>
+              <img
+                src="images/right-arrow.png"
+                alt="arrow"
+                width="30px"
+                height="30px"
+              />
+            </div>
+            <div style="display: flex; align-items: center">
+              <a href="#">Community</a>
+              <img
+                src="images/right-arrow.png"
+                alt="arrow"
+                width="30px"
+                height="30px"
+              />
+            </div>
+            <div style="display: flex; align-items: center">
+              <a href="#">Experiences</a>
+              <img
+                src="images/right-arrow.png"
+                alt="arrow"
+                width="30px"
+                height="30px"
+              />
+            </div>
+            <div class="bottom_mobile">
+              <a href="#" style="padding-top: 3rem">Search</a>
+              <a href="#">Login</a>
+              <a href="#">Register</a>
+            </div>
+          </div>
+          <p style="padding: 1rem">info@fierceclarity.com</p>
+
+          <div
+            style="
+              display: flex;
+              gap: 1.25rem;
+              padding-bottom: 50px;
+              padding-left: 0.5rem;
+            "
+          >
+            <img style="width: 36px" src="images/facebook.png" alt="Facebook" />
+            <img style="width: 36px" src="images/twitter.png" alt="Twitter" />
+            <img
+              style="width: 36px"
+              src="images/instagram.png"
+              alt="Instagram"
+            />
+            <img style="width: 36px" src="images/youtube.png" alt="Youtube" />
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <div class="banner">
+          <div class="left-div">
+            <div class="circle">
+              <div class="text">
+                <p class="welcome_text">Welcome to our world.</p>
+              </div>
+            </div>
+            <img
+              src="images/banner_image.png"
+              alt="welcome"
+              style="max-width: 80vw; width: 300px"
+            />
+          </div>
+          <div class="right-div">
+            <h1>Start living <br />your healthiest life.</h1>
+            <p>
+              We provide wellness experiences and lifestyle design tools to help
+              you live your happiest + healthiest life. We focus on mind + body
+              + spirit and teach you how to step into your power and create the
+              life of your dreams. We connect you with a like-minded community
+              because we are a tribe and we've been waiting for you.
+            </p>
+            <div style="display: flex; align-items: center; margin-top: 2rem">
+              <a href="#" class="cta_button">Join the Community</a>
+              <img src="images/right-arrow.png" alt="arrow" />
+            </div>
+          </div>
+        </div>
+        <div class="second_section">
+          <div class="second_left">
+            <h1>
+              Be happy,<br />
+              be healthy,<br />
+              be fly.
+            </h1>
+            <p>Live your best life in Fierce Clarity Activewear.</p>
+            <div style="display: flex; align-items: center; margin-top: 2rem">
+              <a href="#" class="cta_button">Shop the collection</a>
+              <img src="images/right-arrow.png" alt="arrow" />
+            </div>
+          </div>
+          <div class="second_right">
+            <div class="product_slider">
+              <div class="arrow arrow-left" onclick="scrollProducts('left')">
+                <img
+                  style="transform: rotate(180deg)"
+                  src="images/right-arrow.png"
+                  alt="arrow"
+                />
+              </div>
+              <div class="product_container" id="productContainer"></div>
+              <div class="arrow arrow-right" onclick="scrollProducts('right')">
+                <img src="images/right-arrow.png" alt="arrow" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer style="background-color: #bdbdbd; padding: 20px">
+      <div class="footer_div">
+        <div>
+          <p>Logo</p>
+        </div>
+
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li>FAQ</li>
+            <li>Shipping and Returns</li>
+            <li>Sizing</li>
+            <li>Cookie Use</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>About</h3>
+          <ul>
+            <li>Our Story</li>
+            <li>Media</li>
+            <li>Careers</li>
+            <li>Press</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact Us</h3>
+          <ul>
+            <li>info@fierceclarity.com</li>
+          </ul>
+          <div style="display: flex; gap: 10px">
+            <img style="width: 18px" src="images/facebook.png" alt="Facebook" />
+            <img style="width: 18px" src="images/twitter.png" alt="Twitter" />
+            <img
+              style="width: 18px"
+              src="images/instagram.png"
+              alt="Instagram"
+            />
+            <img style="width: 18px" src="images/youtube.png" alt="Youtube" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenu.classList.toggle("show");
+      }
+    </script>
+  </body>
+  <script>
+    const text = document.querySelector(".text p");
+    text.innerHTML = text.innerText
+      .split("")
+      .map(
+        (char, i) =>
+          `<span style="transform:rotate(${
+            i * 18
+          }deg);font-size:5rem">${char}</span>`
+      )
+      .join("");
+  </script>
+</html>

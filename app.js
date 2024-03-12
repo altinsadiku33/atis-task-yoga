@@ -69,41 +69,47 @@ function renderProducts(productsToRender) {
   const productContainer = document.getElementById("productContainer");
   productContainer.innerHTML = "";
 
-  productsToRender.forEach((product) => {
+  productsToRender.forEach((product, index) => {
     productContainer.innerHTML += `
-  <div class="product_card">
-    <img src="${product.image}" alt="${product.name}" />
-    <div style="display: flex; justify-content:space-between;align-items: center;">
-      <p >${product.name}</p>
-      <div class="clickable-color">
-        ${product.colors
-          .map(
-            (color, index) => `
-              <span 
-                style="
-                  background-color: ${color};
-                  border: ${
-                    index === product.selectedColorIndex
-                      ? "1px solid black"
-                      : "1px solid transparent"
-                  };
-                "
-                class="${
-                  index === product.selectedColorIndex ? "selected" : ""
-                }"
-                onclick="selectColor(${index}, ${productsToRender.indexOf(
-              product
-            )})"
-              ></span>
-            `
-          )
-          .join("")}
+      <div class="product_card" onclick="redirectToShop(${index})">
+        <img src="${product.image}" alt="${product.name}" />
+        <div style="display: flex; justify-content:space-between;align-items: center;">
+          <p>${product.name}</p>
+          <div class="clickable-color">
+            ${product.colors
+              .map(
+                (color, colorIndex) => `
+                  <span 
+                    style="
+                      background-color: ${color};
+                      border: ${
+                        colorIndex === product.selectedColorIndex
+                          ? "1px solid black"
+                          : "1px solid transparent"
+                      };
+                    "
+                    class="${
+                      colorIndex === product.selectedColorIndex
+                        ? "selected"
+                        : ""
+                    }"
+                    onclick="selectColor(${colorIndex}, ${index})"
+                  ></span>
+                `
+              )
+              .join("")}
+          </div>
+        </div>
+        <p class="product_price">$${product.price}</p>
       </div>
-    </div>
-    <p class="product_price">$${product.price}</p>
-  </div>
-`;
+    `;
   });
+}
+function redirectToShop(productIndex) {
+  const selectedProductName = products[productIndex].name;
+  window.location.href = `product.html?product=${encodeURIComponent(
+    selectedProductName
+  )}`;
 }
 
 function selectColor(index, productIndex) {

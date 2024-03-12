@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Product</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div style="padding: 20px">
+      <header>
+        <div class="header_div">
+          <p>Yoga with Dr.Danielle - Live class in session</p>
+        </div>
+      </header>
+      <nav>
+        <div class="navbar_container navbar_items">
+          <a href="/index.html">
+            <div class="logo">Logo</div>
+          </a>
+          <div class="nav_items">
+            <a href="/shop.html">Shop</a>
+            <div class="submenu">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 3rem;
+                "
+              >
+                <div
+                  style="display: flex; flex-direction: column; max-width: 30%"
+                >
+                  <div style="display: flex; align-items: center; gap: 0.5rem">
+                    <h4>Our Story</h4>
+                    <img
+                      src="images/right-arrow.png"
+                      alt="arrow"
+                      width="16px"
+                      height="16px"
+                    />
+                  </div>
+                  <p class="hover_menu_text">
+                    Learn about Dr. Danielle and her vision for Fierce Clarity.
+                    Read our origin story.
+                  </p>
+                </div>
+                <div
+                  style="display: flex; flex-direction: column; max-width: 30%"
+                >
+                  <div style="display: flex; align-items: center; gap: 0.5rem">
+                    <h4>Our Story</h4>
+                    <img
+                      src="images/right-arrow.png"
+                      alt="arrow"
+                      width="16px"
+                      height="16px"
+                    />
+                  </div>
+                  <p class="hover_menu_text">
+                    We approach health holistically, mind + body + spirit. Learn
+                    how we tackle all three.
+                  </p>
+                </div>
+                <div
+                  style="display: flex; flex-direction: column; max-width: 30%"
+                >
+                  <div style="display: flex; align-items: center; gap: 0.5rem">
+                    <h4>Our Story</h4>
+                    <img
+                      src="images/right-arrow.png"
+                      alt="arrow"
+                      width="16px"
+                      height="16px"
+                    />
+                  </div>
+                  <p class="hover_menu_text">
+                    The FC Gang is here to support and to be supported. Dive
+                    into our community.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="#">About</a>
+            <a href="#">Community</a>
+            <a href="#">Experiences</a>
+          </div>
+          <div class="user_section">
+            <a href="#">Sign In</a>
+            <a href="#">Search</a>
+            <div class="avatar">
+              <p>O</p>
+            </div>
+          </div>
+        </div>
+        <div class="navbar_mobile">
+          <div class="user_section">
+            <div class="avatar">
+              <p>O</p>
+            </div>
+            <img
+              src="images/menu.png"
+              alt="menu"
+              onclick="toggleMobileMenu()"
+            />
+          </div>
+        </div>
+        <div class="mobile_menu" id="mobileMenu">
+          <div>
+            <div style="display: flex; align-items: center">
+              <a href="/shop.html">Shop</a>
+              <img
+                src="images/right-arrow.png"
+                alt="arrow"
+                width="30px"
+                height="30px"
+              />
+            </div>
+            <div style="display: flex; align-items: center">
+              <a href="#">About</a>
+              <img
+                src="images/right-arrow.png"
+                alt="arrow"
+                width="30px"
+                height="30px"
+              />
+            </div>
+            <div style="display: flex; align-items: center">
+              <a href="#">Community</a>
+              <img
+                src="images/right-arrow.png"
+                alt="arrow"
+                width="30px"
+                height="30px"
+              />
+            </div>
+            <div style="display: flex; align-items: center">
+              <a href="#">Experiences</a>
+              <img
+                src="images/right-arrow.png"
+                alt="arrow"
+                width="30px"
+                height="30px"
+              />
+            </div>
+            <div class="bottom_mobile">
+              <a href="#" style="padding-top: 3rem">Search</a>
+              <a href="#">Login</a>
+              <a href="#">Register</a>
+            </div>
+          </div>
+          <p style="padding: 1rem">info@fierceclarity.com</p>
+
+          <div
+            style="
+              display: flex;
+              gap: 1.25rem;
+              padding-bottom: 50px;
+              padding-left: 0.5rem;
+            "
+          >
+            <img style="width: 36px" src="images/facebook.png" alt="Facebook" />
+            <img style="width: 36px" src="images/twitter.png" alt="Twitter" />
+            <img
+              style="width: 36px"
+              src="images/instagram.png"
+              alt="Instagram"
+            />
+            <img style="width: 36px" src="images/youtube.png" alt="Youtube" />
+          </div>
+        </div>
+      </nav>
+      <div id="singleProductContainer"></div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        displaySingleProduct();
+      });
+
+      function displaySingleProduct() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const productName = urlParams.get("product");
+
+        const product = getProductByName(productName);
+
+        if (product) {
+          const singleProductContainer = document.getElementById(
+            "singleProductContainer"
+          );
+          singleProductContainer.innerHTML = `
+            <div class="single_product">
+              <img src="${product.image}" alt="${product.name}" />
+              <h2>${product.name}</h2>
+              <p>Price: $${product.price}</p>
+            </div>
+          `;
+        } else {
+          console.error("Product not found");
+        }
+      }
+
+      function getProductByName(name) {
+        return products.find((product) => product.name === name);
+      }
+    </script>
+  </body>
+</html>

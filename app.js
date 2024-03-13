@@ -71,8 +71,10 @@ function renderProducts(productsToRender) {
 
   productsToRender.forEach((product, index) => {
     productContainer.innerHTML += `
-      <div class="product_card" onclick="redirectToShop(${index})">
-        <img src="${product.image}" alt="${product.name}" />
+   <div class="product_card">
+      <img src="${product.image}" alt="${
+      product.name
+    }" onclick="redirectToShop(${index})"/>
         <div style="display: flex; justify-content:space-between;align-items: center;">
           <p>${product.name}</p>
           <div class="clickable-color">
